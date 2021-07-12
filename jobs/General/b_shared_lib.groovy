@@ -19,7 +19,7 @@ import org.jenkinsci.plugins.workflow.libs.SCMSourceRetriever
 
 node('master') {
   println "Get shared library configuration from file..."
-  git branch: 'master', url: 'https://github.com/ricardocutzhernandez/jenkins-server.git'
+  git branch: 'main', url: 'https://github.com/ricardocutzhernandez/jenkins-server.git'
   f = new File("$WORKSPACE/config/sharedlibs.json")
 
   def jsonSlurper = new JsonSlurper()
@@ -37,10 +37,10 @@ node('master') {
 
       name = lib.name
       def library = new LibraryConfiguration(name, retriever)
-      defaultVersion = 'master'
+      defaultVersion = 'main'
       if (remote != null) {
           if (version == null) {
-              version = 'master'
+              version = 'main'
           }
           if (credentialsId != null) {
               scm.credentialsId = credentialsId
