@@ -67,3 +67,248 @@ jobs:
           }
         }
       }
+
+security:
+  scriptApproval:
+    approvedSignatures:
+      - field jenkins.model.Jenkins clouds
+      - method com.cloudbees.jenkins.plugins.amazonecs.ECSCloud setJenkinsUrl java.lang.String
+      - method com.cloudbees.jenkins.plugins.amazonecs.ECSCloud setRegionName java.lang.String
+      - method com.cloudbees.jenkins.plugins.amazonecs.ECSCloud setTemplates java.util.List
+      - method com.cloudbees.jenkins.plugins.amazonecs.ECSTaskTemplate setLogDriver java.lang.String
+      - method com.nirima.jenkins.plugins.docker.DockerTemplate setPullStrategy com.nirima.jenkins.plugins.docker.DockerImagePullStrategy
+      - method hudson.model.Saveable save
+      - method io.jenkins.docker.connector.DockerComputerJNLPConnector withUser java.lang.String
+      - method java.util.Collection clear
+      - method jenkins.model.Jenkins getExtensionList java.lang.Class
+      - method jenkins.plugins.git.GitSCMSource setCredentialsId java.lang.String
+      - method jenkins.scm.api.SCMSource setTraits java.util.List
+      - method org.jenkinsci.plugins.workflow.libs.GlobalLibraries setLibraries java.util.List
+      - method org.jenkinsci.plugins.workflow.libs.LibraryConfiguration setAllowVersionOverride boolean
+      - method org.jenkinsci.plugins.workflow.libs.LibraryConfiguration setDefaultVersion java.lang.String
+      - method org.jenkinsci.plugins.workflow.libs.LibraryConfiguration setImplicit boolean
+      - method org.jenkinsci.plugins.workflow.libs.LibraryConfiguration setIncludeInChangesets boolean
+      - new com.cloudbees.jenkins.plugins.amazonecs.ECSCloud java.lang.String java.lang.String java.lang.String
+      - new com.cloudbees.jenkins.plugins.amazonecs.ECSTaskTemplate java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String int int int java.lang.String java.lang.String boolean boolean java.lang.String java.util.List java.util.List java.util.List java.util.List java.util.List java.lang.String java.lang.String java.lang.String int
+      - new com.cloudbees.jenkins.plugins.amazonecs.ECSTaskTemplate$EnvironmentEntry java.lang.String java.lang.String
+      - new com.cloudbees.jenkins.plugins.amazonecs.ECSTaskTemplate$LogDriverOption java.lang.String java.lang.String
+      - new com.cloudbees.jenkins.plugins.amazonecs.ECSTaskTemplate$MountPointEntry java.lang.String java.lang.String java.lang.String java.lang.Boolean
+      - new com.nirima.jenkins.plugins.docker.DockerCloud java.lang.String java.util.List java.lang.String java.lang.String int int java.lang.String java.lang.String java.lang.String
+      - new com.nirima.jenkins.plugins.docker.DockerTemplate com.nirima.jenkins.plugins.docker.DockerTemplateBase io.jenkins.docker.connector.DockerComputerConnector java.lang.String java.lang.String java.lang.String
+      - new com.nirima.jenkins.plugins.docker.DockerTemplateBase java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String java.lang.Integer java.lang.Integer java.lang.Integer java.lang.Integer java.lang.String boolean boolean boolean java.lang.String java.lang.String
+      - new hudson.slaves.JNLPLauncher
+      - new io.jenkins.docker.connector.DockerComputerJNLPConnector hudson.slaves.JNLPLauncher
+      - new java.io.File java.lang.String
+      - new jenkins.plugins.git.GitSCMSource java.lang.String
+      - new jenkins.plugins.git.traits.BranchDiscoveryTrait
+      - new org.jenkinsci.plugins.workflow.libs.LibraryConfiguration java.lang.String org.jenkinsci.plugins.workflow.libs.LibraryRetriever
+      - new org.jenkinsci.plugins.workflow.libs.SCMSourceRetriever jenkins.scm.api.SCMSource
+      - staticField com.nirima.jenkins.plugins.docker.DockerImagePullStrategy PULL_NEVER
+      - staticMethod java.lang.System getenv java.lang.String
+      - staticMethod jenkins.model.Jenkins getInstance
+      - staticMethod org.codehaus.groovy.runtime.DefaultGroovyMethods execute java.lang.String
+      - staticMethod org.codehaus.groovy.runtime.DefaultGroovyMethods getText java.io.File
+      - staticMethod org.codehaus.groovy.runtime.ProcessGroovyMethods getText java.lang.Process
+      - field jenkins.model.Jenkins clouds
+      - method com.cloudbees.jenkins.plugins.amazonecs.ECSCloud setJenkinsUrl java.lang.String
+      - method com.cloudbees.jenkins.plugins.amazonecs.ECSCloud setRegionName java.lang.String
+      - method com.cloudbees.jenkins.plugins.amazonecs.ECSCloud setTemplates java.util.List
+      - method com.cloudbees.jenkins.plugins.amazonecs.ECSTaskTemplate setLogDriver java.lang.String
+      - method com.nirima.jenkins.plugins.docker.DockerTemplate setPullStrategy com.nirima.jenkins.plugins.docker.DockerImagePullStrategy
+      - method hudson.model.Saveable save
+      - method io.jenkins.docker.connector.DockerComputerJNLPConnector withUser java.lang.String
+      - method java.util.Collection clear
+      - method jenkins.model.Jenkins getAuthorizationStrategy
+      - method jenkins.model.Jenkins getExtensionList java.lang.Class
+      - method jenkins.model.Jenkins getSecurityRealm
+      - method jenkins.plugins.git.GitSCMSource setCredentialsId java.lang.String
+      - method jenkins.scm.api.SCMSource setTraits java.util.List
+      - method org.jenkinsci.plugins.workflow.libs.GlobalLibraries setLibraries java.util.List
+      - method org.jenkinsci.plugins.workflow.libs.LibraryConfiguration setAllowVersionOverride boolean
+      - method org.jenkinsci.plugins.workflow.libs.LibraryConfiguration setDefaultVersion java.lang.String
+      - method org.jenkinsci.plugins.workflow.libs.LibraryConfiguration setImplicit boolean
+      - method org.jenkinsci.plugins.workflow.libs.LibraryConfiguration setIncludeInChangesets boolean
+      - new com.cloudbees.jenkins.plugins.amazonecs.ECSCloud java.lang.String java.lang.String java.lang.String
+      - new com.cloudbees.jenkins.plugins.amazonecs.ECSTaskTemplate java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String int int int java.lang.String java.lang.String boolean boolean java.lang.String java.util.List java.util.List java.util.List java.util.List java.util.List java.lang.String java.lang.String java.lang.String int
+      - new com.cloudbees.jenkins.plugins.amazonecs.ECSTaskTemplate$EnvironmentEntry java.lang.String java.lang.String
+      - new com.cloudbees.jenkins.plugins.amazonecs.ECSTaskTemplate$LogDriverOption java.lang.String java.lang.String
+      - new com.cloudbees.jenkins.plugins.amazonecs.ECSTaskTemplate$MountPointEntry java.lang.String java.lang.String java.lang.String java.lang.Boolean
+      - new com.nirima.jenkins.plugins.docker.DockerCloud java.lang.String java.util.List java.lang.String java.lang.String int int java.lang.String java.lang.String java.lang.String
+      - new com.nirima.jenkins.plugins.docker.DockerTemplate com.nirima.jenkins.plugins.docker.DockerTemplateBase io.jenkins.docker.connector.DockerComputerConnector java.lang.String java.lang.String java.lang.String
+      - new com.nirima.jenkins.plugins.docker.DockerTemplateBase java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String java.lang.Integer java.lang.Integer java.lang.Integer java.lang.Integer java.lang.String boolean boolean boolean java.lang.String java.lang.String
+      - new hudson.slaves.JNLPLauncher
+      - new io.jenkins.docker.connector.DockerComputerJNLPConnector hudson.slaves.JNLPLauncher
+      - new java.io.File java.lang.String
+      - new jenkins.plugins.git.GitSCMSource java.lang.String
+      - new jenkins.plugins.git.traits.BranchDiscoveryTrait
+      - new org.jenkinsci.plugins.GithubAuthorizationStrategy java.lang.String boolean boolean boolean java.lang.String boolean boolean boolean boolean
+      - new org.jenkinsci.plugins.GithubSecurityRealm java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String
+      - new org.jenkinsci.plugins.workflow.libs.LibraryConfiguration java.lang.String org.jenkinsci.plugins.workflow.libs.LibraryRetriever
+      - new org.jenkinsci.plugins.workflow.libs.SCMSourceRetriever jenkins.scm.api.SCMSource
+      - staticField com.nirima.jenkins.plugins.docker.DockerImagePullStrategy PULL_NEVER
+      - staticMethod java.lang.System getenv
+      - staticMethod java.lang.System getenv java.lang.String
+      - staticMethod jenkins.model.Jenkins getInstance
+      - staticMethod org.codehaus.groovy.runtime.DefaultGroovyMethods execute java.lang.String
+      - staticMethod org.codehaus.groovy.runtime.DefaultGroovyMethods getText java.io.File
+      - staticMethod org.codehaus.groovy.runtime.ProcessGroovyMethods getText java.lang.Process
+      - field jenkins.model.Jenkins clouds
+      - method com.cloudbees.jenkins.plugins.amazonecs.ECSCloud setJenkinsUrl java.lang.String
+      - method com.cloudbees.jenkins.plugins.amazonecs.ECSCloud setRegionName java.lang.String
+      - method com.cloudbees.jenkins.plugins.amazonecs.ECSCloud setTemplates java.util.List
+      - method com.cloudbees.jenkins.plugins.amazonecs.ECSTaskTemplate setLogDriver java.lang.String
+      - method com.nirima.jenkins.plugins.docker.DockerTemplate setPullStrategy com.nirima.jenkins.plugins.docker.DockerImagePullStrategy
+      - method hudson.model.Saveable save
+      - method io.jenkins.docker.connector.DockerComputerJNLPConnector withUser java.lang.String
+      - method java.util.Collection clear
+      - method jenkins.model.Jenkins getAuthorizationStrategy
+      - method jenkins.model.Jenkins getExtensionList java.lang.Class
+      - method jenkins.model.Jenkins getSecurityRealm
+      - method jenkins.model.Jenkins setAuthorizationStrategy hudson.security.AuthorizationStrategy
+      - method jenkins.plugins.git.GitSCMSource setCredentialsId java.lang.String
+      - method jenkins.scm.api.SCMSource setTraits java.util.List
+      - method org.jenkinsci.plugins.workflow.libs.GlobalLibraries setLibraries java.util.List
+      - method org.jenkinsci.plugins.workflow.libs.LibraryConfiguration setAllowVersionOverride boolean
+      - method org.jenkinsci.plugins.workflow.libs.LibraryConfiguration setDefaultVersion java.lang.String
+      - method org.jenkinsci.plugins.workflow.libs.LibraryConfiguration setImplicit boolean
+      - method org.jenkinsci.plugins.workflow.libs.LibraryConfiguration setIncludeInChangesets boolean
+      - new com.cloudbees.jenkins.plugins.amazonecs.ECSCloud java.lang.String java.lang.String java.lang.String
+      - new com.cloudbees.jenkins.plugins.amazonecs.ECSTaskTemplate java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String int int int java.lang.String java.lang.String boolean boolean java.lang.String java.util.List java.util.List java.util.List java.util.List java.util.List java.lang.String java.lang.String java.lang.String int
+      - new com.cloudbees.jenkins.plugins.amazonecs.ECSTaskTemplate$EnvironmentEntry java.lang.String java.lang.String
+      - new com.cloudbees.jenkins.plugins.amazonecs.ECSTaskTemplate$LogDriverOption java.lang.String java.lang.String
+      - new com.cloudbees.jenkins.plugins.amazonecs.ECSTaskTemplate$MountPointEntry java.lang.String java.lang.String java.lang.String java.lang.Boolean
+      - new com.nirima.jenkins.plugins.docker.DockerCloud java.lang.String java.util.List java.lang.String java.lang.String int int java.lang.String java.lang.String java.lang.String
+      - new com.nirima.jenkins.plugins.docker.DockerTemplate com.nirima.jenkins.plugins.docker.DockerTemplateBase io.jenkins.docker.connector.DockerComputerConnector java.lang.String java.lang.String java.lang.String
+      - new com.nirima.jenkins.plugins.docker.DockerTemplateBase java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String java.lang.Integer java.lang.Integer java.lang.Integer java.lang.Integer java.lang.String boolean boolean boolean java.lang.String java.lang.String
+      - new hudson.slaves.JNLPLauncher
+      - new io.jenkins.docker.connector.DockerComputerJNLPConnector hudson.slaves.JNLPLauncher
+      - new java.io.File java.lang.String
+      - new jenkins.plugins.git.GitSCMSource java.lang.String
+      - new jenkins.plugins.git.traits.BranchDiscoveryTrait
+      - new org.jenkinsci.plugins.GithubAuthorizationStrategy java.lang.String boolean boolean boolean java.lang.String boolean boolean boolean boolean
+      - new org.jenkinsci.plugins.GithubSecurityRealm java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String
+      - new org.jenkinsci.plugins.workflow.libs.LibraryConfiguration java.lang.String org.jenkinsci.plugins.workflow.libs.LibraryRetriever
+      - new org.jenkinsci.plugins.workflow.libs.SCMSourceRetriever jenkins.scm.api.SCMSource
+      - staticField com.nirima.jenkins.plugins.docker.DockerImagePullStrategy PULL_NEVER
+      - staticMethod java.lang.System getenv
+      - staticMethod java.lang.System getenv java.lang.String
+      - staticMethod jenkins.model.Jenkins getInstance
+      - staticMethod org.codehaus.groovy.runtime.DefaultGroovyMethods execute java.lang.String
+      - staticMethod org.codehaus.groovy.runtime.DefaultGroovyMethods getText java.io.File
+      - staticMethod org.codehaus.groovy.runtime.ProcessGroovyMethods getText java.lang.Process
+
+      - field jenkins.model.Jenkins clouds
+      - method com.cloudbees.jenkins.plugins.amazonecs.ECSCloud setJenkinsUrl java.lang.String
+      - method com.cloudbees.jenkins.plugins.amazonecs.ECSCloud setRegionName java.lang.String
+      - method com.cloudbees.jenkins.plugins.amazonecs.ECSCloud setTemplates java.util.List
+      - method com.cloudbees.jenkins.plugins.amazonecs.ECSTaskTemplate setLogDriver java.lang.String
+      - method com.nirima.jenkins.plugins.docker.DockerTemplate setPullStrategy com.nirima.jenkins.plugins.docker.DockerImagePullStrategy
+      - method hudson.model.Saveable save
+      - method io.jenkins.docker.connector.DockerComputerJNLPConnector withUser java.lang.String
+      - method java.util.Collection clear
+      - method jenkins.model.Jenkins getAuthorizationStrategy
+      - method jenkins.model.Jenkins getExtensionList java.lang.Class
+      - method jenkins.model.Jenkins getSecurityRealm
+      - method jenkins.model.Jenkins setAuthorizationStrategy hudson.security.AuthorizationStrategy
+      - method jenkins.plugins.git.GitSCMSource setCredentialsId java.lang.String
+      - method jenkins.scm.api.SCMSource setTraits java.util.List
+      - method org.jenkinsci.plugins.workflow.libs.GlobalLibraries setLibraries java.util.List
+      - method org.jenkinsci.plugins.workflow.libs.LibraryConfiguration setAllowVersionOverride boolean
+      - method org.jenkinsci.plugins.workflow.libs.LibraryConfiguration setDefaultVersion java.lang.String
+      - method org.jenkinsci.plugins.workflow.libs.LibraryConfiguration setImplicit boolean
+      - method org.jenkinsci.plugins.workflow.libs.LibraryConfiguration setIncludeInChangesets boolean
+      - new com.cloudbees.jenkins.plugins.amazonecs.ECSCloud java.lang.String java.lang.String java.lang.String
+      - new com.cloudbees.jenkins.plugins.amazonecs.ECSTaskTemplate java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String int int int java.lang.String java.lang.String boolean boolean java.lang.String java.util.List java.util.List java.util.List java.util.List java.util.List java.lang.String java.lang.String java.lang.String int
+      - new com.cloudbees.jenkins.plugins.amazonecs.ECSTaskTemplate$EnvironmentEntry java.lang.String java.lang.String
+      - new com.cloudbees.jenkins.plugins.amazonecs.ECSTaskTemplate$LogDriverOption java.lang.String java.lang.String
+      - new com.cloudbees.jenkins.plugins.amazonecs.ECSTaskTemplate$MountPointEntry java.lang.String java.lang.String java.lang.String java.lang.Boolean
+      - new com.nirima.jenkins.plugins.docker.DockerCloud java.lang.String java.util.List java.lang.String java.lang.String int int java.lang.String java.lang.String java.lang.String
+      - new com.nirima.jenkins.plugins.docker.DockerTemplate com.nirima.jenkins.plugins.docker.DockerTemplateBase io.jenkins.docker.connector.DockerComputerConnector java.lang.String java.lang.String java.lang.String
+      - new com.nirima.jenkins.plugins.docker.DockerTemplateBase java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String java.lang.Integer java.lang.Integer java.lang.Integer java.lang.Integer java.lang.String boolean boolean boolean java.lang.String java.lang.String
+      - new hudson.slaves.JNLPLauncher
+      - new io.jenkins.docker.connector.DockerComputerJNLPConnector hudson.slaves.JNLPLauncher
+      - new java.io.File java.lang.String
+      - new jenkins.plugins.git.GitSCMSource java.lang.String
+      - new jenkins.plugins.git.traits.BranchDiscoveryTrait
+      - new org.jenkinsci.plugins.GithubAuthorizationStrategy java.lang.String boolean boolean boolean java.lang.String boolean boolean boolean boolean
+      - new org.jenkinsci.plugins.GithubSecurityRealm java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String
+      - new org.jenkinsci.plugins.workflow.libs.LibraryConfiguration java.lang.String org.jenkinsci.plugins.workflow.libs.LibraryRetriever
+      - new org.jenkinsci.plugins.workflow.libs.SCMSourceRetriever jenkins.scm.api.SCMSource
+      - staticField com.nirima.jenkins.plugins.docker.DockerImagePullStrategy PULL_NEVER
+      - staticMethod java.lang.System getenv
+      - staticMethod java.lang.System getenv java.lang.String
+      - staticMethod jenkins.model.Jenkins getInstance
+
+      - staticMethod org.codehaus.groovy.runtime.DefaultGroovyMethods execute java.lang.String
+      - staticMethod org.codehaus.groovy.runtime.DefaultGroovyMethods getText java.io.File
+      - staticMethod org.codehaus.groovy.runtime.ProcessGroovyMethods getText java.lang.Process
+
+      - field jenkins.model.Jenkins clouds
+      - method com.cloudbees.jenkins.plugins.amazonecs.ECSCloud setJenkinsUrl java.lang.String
+      - method com.cloudbees.jenkins.plugins.amazonecs.ECSCloud setRegionName java.lang.String
+      - method com.cloudbees.jenkins.plugins.amazonecs.ECSCloud setTemplates java.util.List
+      - method com.cloudbees.jenkins.plugins.amazonecs.ECSTaskTemplate setLogDriver java.lang.String
+      - method com.nirima.jenkins.plugins.docker.DockerTemplate setPullStrategy com.nirima.jenkins.plugins.docker.DockerImagePullStrategy
+      - method hudson.model.Saveable save
+      - method io.jenkins.docker.connector.DockerComputerJNLPConnector withUser java.lang.String
+      - method java.util.Collection clear
+      - method jenkins.model.Jenkins getAuthorizationStrategy
+      - method jenkins.model.Jenkins getExtensionList java.lang.Class
+      - method jenkins.model.Jenkins getSecurityRealm
+      - method jenkins.model.Jenkins setAuthorizationStrategy hudson.security.AuthorizationStrategy
+      - method jenkins.plugins.git.GitSCMSource setCredentialsId java.lang.String
+      - method jenkins.scm.api.SCMSource setTraits java.util.List
+      - method org.jenkinsci.plugins.workflow.libs.GlobalLibraries setLibraries java.util.List
+      - method org.jenkinsci.plugins.workflow.libs.LibraryConfiguration setAllowVersionOverride boolean
+      - method org.jenkinsci.plugins.workflow.libs.LibraryConfiguration setDefaultVersion java.lang.String
+      - method org.jenkinsci.plugins.workflow.libs.LibraryConfiguration setImplicit boolean
+      - method org.jenkinsci.plugins.workflow.libs.LibraryConfiguration setIncludeInChangesets boolean
+      - new com.cloudbees.jenkins.plugins.amazonecs.ECSCloud java.lang.String java.lang.String java.lang.String
+      - new com.cloudbees.jenkins.plugins.amazonecs.ECSTaskTemplate java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String int int int java.lang.String java.lang.String boolean boolean java.lang.String java.util.List java.util.List java.util.List java.util.List java.util.List java.lang.String java.lang.String java.lang.String int
+      - new com.cloudbees.jenkins.plugins.amazonecs.ECSTaskTemplate$EnvironmentEntry java.lang.String java.lang.String
+      - new com.cloudbees.jenkins.plugins.amazonecs.ECSTaskTemplate$LogDriverOption java.lang.String java.lang.String
+      - new com.cloudbees.jenkins.plugins.amazonecs.ECSTaskTemplate$MountPointEntry java.lang.String java.lang.String java.lang.String java.lang.Boolean
+      - new com.nirima.jenkins.plugins.docker.DockerCloud java.lang.String java.util.List java.lang.String java.lang.String int int java.lang.String java.lang.String java.lang.String
+      - new com.nirima.jenkins.plugins.docker.DockerTemplate com.nirima.jenkins.plugins.docker.DockerTemplateBase io.jenkins.docker.connector.DockerComputerConnector java.lang.String java.lang.String java.lang.String
+      - new com.nirima.jenkins.plugins.docker.DockerTemplateBase java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String java.lang.Integer java.lang.Integer java.lang.Integer java.lang.Integer java.lang.String boolean boolean boolean java.lang.String java.lang.String
+      - new hudson.slaves.JNLPLauncher
+      - new io.jenkins.docker.connector.DockerComputerJNLPConnector hudson.slaves.JNLPLauncher
+      - new java.io.File java.lang.String
+      - new jenkins.plugins.git.GitSCMSource java.lang.String
+      - new jenkins.plugins.git.traits.BranchDiscoveryTrait
+      - new org.jenkinsci.plugins.GithubAuthorizationStrategy java.lang.String boolean boolean boolean java.lang.String boolean boolean boolean boolean
+      - new org.jenkinsci.plugins.GithubSecurityRealm java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String
+      - new org.jenkinsci.plugins.workflow.libs.LibraryConfiguration java.lang.String org.jenkinsci.plugins.workflow.libs.LibraryRetriever
+      - new org.jenkinsci.plugins.workflow.libs.SCMSourceRetriever jenkins.scm.api.SCMSource
+      - staticField com.nirima.jenkins.plugins.docker.DockerImagePullStrategy PULL_NEVER
+      - staticMethod java.lang.System getenv
+      - staticMethod java.lang.System getenv java.lang.String
+      - staticMethod jenkins.model.Jenkins getInstance
+      - staticMethod net.sf.json.JSONObject fromObject java.lang.Object
+      - staticMethod org.codehaus.groovy.runtime.DefaultGroovyMethods execute java.lang.String
+      - staticMethod org.codehaus.groovy.runtime.DefaultGroovyMethods getText java.io.File
+      - staticMethod org.codehaus.groovy.runtime.ProcessGroovyMethods getText java.lang.Process
+      - method hudson.model.Job getBuildByNumber int
+      - method hudson.model.Run getCause java.lang.Class 
+      - method hudson.model.Cause$UserIdCause getUserId
+      - method groovy.lang.GroovyObject invokeMethod java.lang.String java.lang.Object
+      - staticMethod com.amazonaws.regions.Regions getCurrentRegion
+      - method com.amazonaws.regions.Region getName
+      - method com.amazonaws.regions.Region getName
+      - staticMethod com.amazonaws.services.secretsmanager.AWSSecretsManagerClientBuilder standard
+      - method com.amazonaws.client.builder.AwsClientBuilder withRegion java.lang.String
+      - method com.amazonaws.client.builder.AwsClientBuilder build
+      - new com.amazonaws.services.secretsmanager.model.PutSecretValueRequest
+      - method com.amazonaws.services.secretsmanager.model.PutSecretValueRequest withSecretId java.lang.String
+      - new com.amazonaws.services.secretsmanager.model.PutSecretValueResult
+      - method com.amazonaws.services.secretsmanager.model.PutSecretValueResult withName java.lang.String
+      - staticMethod hudson.model.User get java.lang.String boolean
+      - method hudson.model.User getProperty java.lang.Class
+      - method jenkins.security.ApiTokenProperty getTokenStore
+      - method jenkins.security.apitoken.ApiTokenStore generateNewToken java.lang.String
+      - field jenkins.security.apitoken.ApiTokenStore$TokenUuidAndPlainValue plainValue
+      - method com.amazonaws.services.secretsmanager.model.PutSecretValueRequest setSecretString java.lang.String
+      - method com.amazonaws.services.secretsmanager.AWSSecretsManager putSecretValue com.amazonaws.services.secretsmanager.model.PutSecretValueRequest
+      - field jenkins.security.apitoken.TokenUuidAndPlainValue plainValue
+      - method io.jenkins.plugins.casc.ConfigurationAsCode configure
+      - staticMethod io.jenkins.plugins.casc.ConfigurationAsCode get
