@@ -29,3 +29,6 @@ jenkins:
           password: ${ADMIN_PASSWORD}
         - id: ${LOCAL}
           password: ${LOCAL_PASSWORD}
+
+jobs:
+  

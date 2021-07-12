@@ -1,0 +1,7 @@
+{
+    "libs": [{
+        "name": "shared_lib",
+        "remote": "https://github.com/ricardocutzhernandez/jenkins-server.git",
+        "version": "master"
+    }]
+}
