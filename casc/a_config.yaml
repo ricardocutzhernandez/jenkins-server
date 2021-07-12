@@ -31,4 +31,32 @@ jenkins:
           password: ${LOCAL_PASSWORD}
 
 jobs:
-  
+  - script: >
+      freeStyleJob('seed-job') {
+        
+        if( !System.getenv('DOCKER_COMPOSE') ) {
+          scm {
+            git {
+              remote {
+                url('https://github.com/ricardocutzhernandez/jenkins-server.git')
+              }
+              branches('master')
+            }
+          }
+        }
+        displayName('seed-job')
+        steps {
+          dsl {
+            external('jobs/**')
+            removeAction('DELETE')
+            removeViewAction('DELETE')
+          }
+        }
+        publishers {
+          downstreamParameterized {
+            trigger('General/seed_sharedlib') {
+              condition('SUCCESS')
+            }
+          }
+        }
+      }
