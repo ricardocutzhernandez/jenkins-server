@@ -1,0 +1,31 @@
+jenkins:
+  systemMessage: "Jenkins Server Configuration\n\n"
+  authorizationStrategy:
+    roleBased:
+      roles:
+        global:
+          - name: "Administrators"
+            description: "Jenkins administrators"
+            permissions:
+              - "Overall/Administer"
+            assignments:
+              - ${ADMIN_USER}
+          - name: "BasicAccess"
+            description: "Minimal permissions to access jenkins"
+            permissions:
+              - "Overall/Read"
+              - "Agent/Build"
+              - "Job/Build"
+              - "Job/Read"
+              - "Run/Replay"
+              - "View/Read"
+            assignments:
+              - ${LOCAL}
+  securityRealm:
+    local:
+      allowsSignup: false
+      users:
+        - id: ${ADMIN_USER}
+          password: ${ADMIN_PASSWORD}
+        - id: ${LOCAL}
+          password: ${LOCAL_PASSWORD}
