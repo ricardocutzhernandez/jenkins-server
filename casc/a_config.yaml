@@ -33,14 +33,21 @@ jenkins:
 jobs:
   - script: >
       freeStyleJob('seed-job') {
-        
+        triggers {
+          hudsonStartupTrigger {
+            nodeParameterName("master")
+            label("")
+            quietPeriod("10")
+            runOnChoice("ON_CONNECT")
+          }
+        }
         if( !System.getenv('DOCKER_COMPOSE') ) {
           scm {
             git {
               remote {
                 url('https://github.com/ricardocutzhernandez/jenkins-server.git')
               }
-              branches('master')
+              branches('main')
             }
           }
         }
